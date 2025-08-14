@@ -1,4 +1,7 @@
+
+'use client'
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 function Form() {
   const [formValues, setFormValues] = useState({
@@ -7,7 +10,7 @@ function Form() {
     subject: '',
     message: '',
   });
-
+  const router = useRouter();
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -36,38 +39,19 @@ function Form() {
     setFormValues({ ...formValues, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
     e.preventDefault();
     const errors = validate(formValues);
     setFormErrors(errors);
+
     if (Object.keys(errors).length === 0) {
       setIsSubmitting(true);
-      // Submit form
-      fetch('https://template.discretedev.com/html/tradepro/contact.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(formValues).toString(),
-      })
-        .then((response) => {
-          if (response.ok) {
-            alert('Form submitted successfully!');
-            setFormValues({ name: '', email: '', subject: '', message: '' });
-          } else {
-            alert('Failed to submit the form. Please try again.');
-          }
-        })
-        .catch((error) => {
-          console.error('Error submitting form:', error);
-          alert('Error submitting the form.');
-        })
-        .finally(() => {
-          setIsSubmitting(false);
-        });
+
+      setTimeout(() => {
+        router.push("/thankyou"); 
+      }, 500);
     }
   };
-
   return (
     <div>
       <form className="question__form" onSubmit={handleSubmit} method="POST">
@@ -128,7 +112,7 @@ function Form() {
           type="submit"
           disabled={isSubmitting}
         >
-          {isSubmitting ? 'Downloading...' : 'Download Robot'}
+          {"Submit"}
         </button>
       </form>
     </div>

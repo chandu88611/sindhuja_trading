@@ -92,8 +92,8 @@ function Header() {
           <div className="row align-items-center justify-content-between">
             <div className="col-lg-2 col-sm-5 col-md-4 col-6">
               <div className="logo">
-                <a href="index-2">
-                  <img src="/assets/img/logo/logo.png" alt="TradePro Logo" />
+                <a href="/">
+                  <img src="/logo.png" alt="TradePro Logo" />
                 </a>
               </div>
             </div>
@@ -108,16 +108,12 @@ function Header() {
                       <a href="/about">About</a>
                     </li>
                     <li>
-                      <a href="/faqs">Faqs</a>
+                      <a href="/faqs">FAQ's</a>
                     </li>
                     <li className="menu-item-has-children">
                       <a href="#">Softwares</a>
                       <ul className="sub-menu" style={{ width: "340px" }}>
-                        <li>
-                          <a href="/indianmarketsoftware">
-                            Indian Market Software
-                          </a>
-                        </li>
+                     
                         <li>
                           <a href="/forexcurrencysoftware">
                             Forex Currency Software

@@ -7,6 +7,17 @@ import Link from "next/link";
 import Form from "@/components/Form";
 import { useState, useEffect } from "react";
 import { Modal } from "antd";
+import {
+  FaBolt,
+  FaRobot,
+  FaChartLine,
+  FaClock,
+  FaBalanceScale,
+  FaCogs,
+  FaTachometerAlt,
+  FaLayerGroup,
+  FaClipboardList,
+} from "react-icons/fa";
 export default function Home() {
   const [txt, setTxt] = useState("");
   const toRotate = ["Runs in all Market"];
@@ -55,11 +66,20 @@ export default function Home() {
     }, period);
     return () => clearInterval(interval);
   }, [textIndex]);
+
+  
+ const defaultMetadata = {
+  title: "Vertex Algo Trading",
+  description:
+    "Vertex Algo Trading is your trusted partner in automated Forex trading. We specialize in providing powerful, pre-tested Forex algo trading bots designed to execute high-frequency, precision-driven strategies across global currency markets.",
+  canonical: "https://vertexalgotrading.com/",
+};
+
   return (
-    <RootLayout>
+    <RootLayout metadata={defaultMetadata}>
       <Layout>
       <>
-      <section className="hero-welcome-wrapper hero-1">
+      <section className="hero-1">
             <div className="single-slide text-white">
               <div className="container">
                 <div className="row">
@@ -68,8 +88,7 @@ export default function Home() {
                       <h1>Automate Your Trading with Confidence</h1>
                       <p>
                         Experience seamless trading with real-time insights,
-                        expert tools, and algorithmic strategies designed to
-                        maximize your profits while minimizing risks.
+                        expert tools, and algorithmic strategies.
                       </p>
                       <a href="#" className="custom-btn">
                         Get Started
@@ -88,66 +107,145 @@ export default function Home() {
               </div>
             </div>
           </section>
+ 
+   <section className="our-best-features-wrapper section-padding">
+  <div className="container">
+    <div
+      className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
+      data-wow-duration="1.2s"
+    >
+      <img src="assets/img/shape/4.svg" alt="3D Background Shape" />
+    </div>
 
-          {/* Features Section */}
-          <section className="our-best-features-wrapper section-padding">
-            <div className="container">
-              <div
-                className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
-                data-wow-duration="1.2s"
-              >
-                <img src="assets/img/shape/4.svg" alt="3D Background Shape" />
-              </div>
-              <div className="col-xl-8 offset-xl-2 text-center">
-                <div className="block-contents">
-                  <div className="section-title">
-                    <h2>Key Features to Power Your Trading Success</h2>
-                  </div>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-4 col-md-6 col-12">
-                  <div className="features-card-item style-1">
-                    <div className="icon">
-                      <img src="assets/img/feature/1.png" alt="Indicators" />
-                    </div>
-                    <h3>Intelligent Market Indicators</h3>
-                    <p>
-                      Leverage powerful indicators, including price trends,
-                      market volume, and risk metrics, to make informed
-                      decisions.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-6 col-12">
-                  <div className="features-card-item style-1">
-                    <div className="icon">
-                      <img src="assets/img/feature/2.png" alt="Pro Tools" />
-                    </div>
-                    <h3>Advanced Risk Management Tools</h3>
-                    <p>
-                      Master the art of risk management with cutting-edge tools
-                      and strategies designed to protect your investments.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-4 col-md-6 col-12">
-                  <div className="features-card-item style-1">
-                    <div className="icon">
-                      <img src="assets/img/feature/3.png" alt="Order Types" />
-                    </div>
-                    <h3>Versatile Order Types</h3>
-                    <p>
-                      Utilize a variety of order types, including market, limit,
-                      and stop orders, to execute trades with precision.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+    <div className="col-xl-8 offset-xl-2 text-center">
+      <div className="block-contents">
+        <div className="section-title">
+          <h2>Key Features to Power Your Trading Success</h2>
+        </div>
+      </div>
+    </div>
 
-          {/* About Section */}
+<div className="row">
+  {/* Ultra-Fast Execution */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaBolt size={40} />
+      </div>
+      <h3>Efficient Trade Execution</h3>
+      <p>
+        Execute trades quickly to help you respond to market movements with the speed technology allows.
+      </p>
+    </div>
+  </div>
+
+  {/* Precision and Discipline */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaCogs size={40} />
+      </div>
+      <h3>Consistent Algorithmic Trading</h3>
+      <p>
+        Algorithms apply pre-defined rules consistently to reduce emotional bias and human errors.
+      </p>
+    </div>
+  </div>
+
+  {/* Strategy Backtesting */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaClipboardList size={40} />
+      </div>
+      <h3>Strategy Simulation</h3>
+      <p>
+        Test your trading strategies on historical data to better understand potential risks and outcomes before live deployment.
+      </p>
+    </div>
+  </div>
+
+  {/* Portfolio Diversification */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaLayerGroup size={40} />
+      </div>
+      <h3>Diversified Asset Trading</h3>
+      <p>
+        Trade across multiple markets and asset types to help spread your risk through automation with built-in controls.
+      </p>
+    </div>
+  </div>
+
+  {/* 24/7 Market Access */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaClock size={40} />
+      </div>
+      <h3>Access Markets Anytime</h3>
+      <p>
+        Connect to global markets around the clock, allowing opportunities even when you’re not actively monitoring.
+      </p>
+    </div>
+  </div>
+
+  {/* Smart Automation */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaRobot size={40} />
+      </div>
+      <h3>Intelligent Automation</h3>
+      <p>
+        Enable algorithms to assist in both decision-making and trade execution, supporting efficient operations.
+      </p>
+    </div>
+  </div>
+
+  {/* Risk Management Tools */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaBalanceScale size={40} />
+      </div>
+      <h3>Risk Management Features</h3>
+      <p>
+        Utilize built-in tools like stop-loss and position sizing to help manage potential losses and capital allocation.
+      </p>
+    </div>
+  </div>
+
+  {/* Intelligent Indicators */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaChartLine size={40} />
+      </div>
+      <h3>Market Insights</h3>
+      <p>
+        Analyze market trends, volume, and volatility indicators to inform your trading choices.
+      </p>
+    </div>
+  </div>
+
+  {/* Performance Monitoring */}
+  <div className="col-lg-4 col-md-6 col-12">
+    <div className="features-card-item style-1 text-center">
+      <div className="icon mb-3">
+        <FaTachometerAlt size={40} />
+      </div>
+      <h3>Performance Tracking</h3>
+      <p>
+        Monitor real-time execution, profit and loss, and other metrics to evaluate your strategy’s effectiveness.
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
           <section className="content-block section-padding section-bg">
             <div className="container">
               <div className="row align-items-center">
@@ -197,7 +295,7 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Token Distribution Section */}
+        
           <section className="content-block section-padding section-bg-dark overflow-hidden">
             <div className="container">
               <div className="row align-items-center g-5">
@@ -232,614 +330,333 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="col-xl-5 pe-lg-0 col-lg-5 col-12">
-                  <div
+                  {/* <div
                     className="block-img wow fadeInLeft"
                     data-wow-duration="1.1s"
                   >
                     <img src="assets/img/benifit/2.png" alt="Token Distribution" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
           </section>
-  {/* token section end hare */}
-  {/* user ditails secion start hare */}
-  <section className="user-ditails-wrapper fix section-bg section-padding">
-    <div className="container">
-      <div className="row">
-        <div className="col-xl-3 col-sm-6">
-          <div
-            className="single-user-ditails-card mb-4 mb-xl-0 wow fadeInUp"
-            data-wow-duration="1s"
-            data-wow-delay=".2s"
-          >
-            <div className="user-card-wrapper ">
-              <div className="user-card-thumb">
-                <img src="assets/img/user/card/01.png" alt="invest icon" />
-              </div>
-              <div className="user-card-content">
-                <h4>Total Invested</h4>
-                <p>$9374034</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-3 col-sm-6">
-          <div
-            className="single-user-ditails-card mb-4 mb-xl-0 wow fadeInUp"
-            data-wow-duration="1s"
-            data-wow-delay=".2s"
-          >
-            <div className="user-card-wrapper">
-              <div className="user-card-thumb">
-                <img src="assets/img/user/card/02.png" alt="invest icon" />
-              </div>
-              <div className="user-card-content">
-                <h4>Global Nation</h4>
-                <p>196</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-3 col-sm-6">
-          <div
-            className="single-user-ditails-card mb-4 mb-xl-0 wow fadeInUp"
-            data-wow-duration="1s"
-            data-wow-delay=".2s"
-          >
-            <div className="user-card-wrapper">
-              <div className="user-card-thumb">
-                <img src="assets/img/user/card/03.png" alt="invest icon" />
-              </div>
-              <div className="user-card-content">
-                <h4> Remittances</h4>
-                <p>$99915448</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="col-xl-3 col-sm-6">
-          <div
-            className="single-user-ditails-card mb-4 mb-xl-0 wow fadeInUp"
-            data-wow-duration="1s"
-            data-wow-delay=".2s"
-          >
-            <div className="user-card-wrapper">
-              <div className="user-card-thumb">
-                <img src="assets/img/user/card/04.png" alt="invest icon" />
-              </div>
-              <div className="user-card-content">
-                <h4>Total Members</h4>
-                <p>40216</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+ 
   {/* user data secion start hare */}
   {/* crypto app section start hare */}
-  <section className="content-block fix faq-wrapper section-padding section-bg-dark">
-    <div className="container">
-      <div className="row align-items-center">
-        <div className="col-lg-6 col-xl-5 mt-5 mt-lg-0 order-2 order-lg-1">
-          <div className="block-contents">
-            <div className="section-title wow fadeInUp" data-wow-duration="1s">
-              <h2>Take full control of your crypto app</h2>
-            </div>
-          </div>
-          <div className="step-accordion">
-            <div className="accordion" id="accordion">
-              <div
-                className="accordion-item wow fadeInUp"
-                data-wow-duration="1s"
-                data-wow-delay=".3s"
-              >
-                <h4 className="accordion-header">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq1"
-                    aria-expanded="false"
-                    aria-controls="faq1"
-                  >
-                    Download from the Play Store
-                  </button>
-                </h4>
-                <div
-                  id="faq1"
-                  className="accordion-collapse collapse show"
-                  data-bs-parent="#accordion"
-                >
-                  <div className="accordion-body">
-                    You can easily download the TradePro app from the App Store
-                    or Google Play on any device
-                  </div>
-                </div>
-              </div>
-              <div
-                className="accordion-item wow fadeInUp"
-                data-wow-duration="1.1s"
-                data-wow-delay=".6s"
-              >
-                <h4 className="accordion-header">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq2"
-                    aria-expanded="true"
-                    aria-controls="faq2"
-                  >
-                    Create an account easily
-                  </button>
-                </h4>
-                <div
-                  id="faq2"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#accordion"
-                >
-                  <div className="accordion-body">
-                    Open a secure account for yourself with your name and
-                    necessary information that need
-                  </div>
-                </div>
-              </div>
-              <div
-                className="accordion-item wow fadeInUp"
-                data-wow-duration="1.1s"
-                data-wow-delay=".9s"
-              >
-                <h4 className="accordion-header">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faq3"
-                    aria-expanded="false"
-                    aria-controls="faq3"
-                  >
-                    Choose crypto &amp; start trading
-                  </button>
-                </h4>
-                <div
-                  id="faq3"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#accordion"
-                >
-                  <div className="accordion-body">
-                    Crypto transactions can be made easily, at low cost, and
-                    private than most other transactions.
-                  </div>
-                </div>
-              </div>
-            </div>
+<section className="content-block fix faq-wrapper section-padding section-bg-dark">
+  <div className="container">
+    <div className="row align-items-center">
+      {/* FAQ Text Section */}
+      <div className="col-lg-6 col-xl-5 mt-5 mt-lg-0 order-2 order-lg-1">
+        <div className="block-contents">
+          <div className="section-title wow fadeInUp" data-wow-duration="1s">
+            <h2>Frequently Asked Questions</h2>
           </div>
         </div>
-        <div className="col-lg-6 col-xl-6 offset-xl-1 pe-xl-3 col-12 order-1 order-lg-2">
-          <div
-            className="block-img ms-xl-5 wow fadeInRight"
-            data-wow-duration="1.2s"
-            data-wow-delay=".3s"
-          >
-            <img src="assets/img/faq/1.png" alt="faq img" />
+        <div className="step-accordion">
+          <div className="accordion" id="accordion">
+            {/* Question 1 */}
+            <div
+              className="accordion-item wow fadeInUp"
+              data-wow-duration="1s"
+              data-wow-delay=".3s"
+            >
+              <h4 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                  aria-expanded="false"
+                  aria-controls="faq1"
+                >
+                  What is algorithmic trading?
+                </button>
+              </h4>
+              <div
+                id="faq1"
+                className="accordion-collapse collapse show"
+                data-bs-parent="#accordion"
+              >
+                <div className="accordion-body">
+                  Algorithmic trading uses computer programs to automatically execute trades based on pre-set rules and strategies.
+                </div>
+              </div>
+            </div>
+
+            {/* Question 2 */}
+            <div
+              className="accordion-item wow fadeInUp"
+              data-wow-duration="1.1s"
+              data-wow-delay=".6s"
+            >
+              <h4 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                  aria-expanded="false"
+                  aria-controls="faq2"
+                >
+                  Do you guarantee profits?
+                </button>
+              </h4>
+              <div
+                id="faq2"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordion"
+              >
+                <div className="accordion-body">
+                  No. Trading always involves risk. We provide tools to help you trade efficiently, but results depend on market conditions and your strategy.
+                </div>
+              </div>
+            </div>
+
+            {/* Question 3 */}
+            <div
+              className="accordion-item wow fadeInUp"
+              data-wow-duration="1.1s"
+              data-wow-delay=".9s"
+            >
+              <h4 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                  aria-expanded="false"
+                  aria-controls="faq3"
+                >
+                  Do I need trading experience to use your services?
+                </button>
+              </h4>
+              <div
+                id="faq3"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordion"
+              >
+                <div className="accordion-body">
+                  Not necessarily. Our systems are designed to be beginner-friendly, but understanding the basics of trading is recommended.
+                </div>
+              </div>
+            </div>
+
+            {/* Question 4 */}
+            <div
+              className="accordion-item wow fadeInUp"
+              data-wow-duration="1.1s"
+              data-wow-delay="1.2s"
+            >
+              <h4 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                  aria-expanded="false"
+                  aria-controls="faq4"
+                >
+                  Can I customize the trading strategies?
+                </button>
+              </h4>
+              <div
+                id="faq4"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordion"
+              >
+                <div className="accordion-body">
+                  Yes. We offer strategy customization to suit your trading style and goals.
+                </div>
+              </div>
+            </div>
+
+            {/* Question 5 */}
+            <div
+              className="accordion-item wow fadeInUp"
+              data-wow-duration="1.1s"
+              data-wow-delay="1.5s"
+            >
+              <h4 className="accordion-header">
+                <button
+                  className="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                  aria-expanded="false"
+                  aria-controls="faq5"
+                >
+                  How do I get started?
+                </button>
+              </h4>
+              <div
+                id="faq5"
+                className="accordion-collapse collapse"
+                data-bs-parent="#accordion"
+              >
+                <div className="accordion-body">
+                  Contact us through our website form or email, and our team will guide you through setup.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* FAQ Image */}
+      <div className="col-lg-6 col-xl-6 offset-xl-1 pe-xl-3 col-12 order-1 order-lg-2">
+        <div
+          className="block-img ms-xl-5 wow fadeInRight"
+          data-wow-duration="1.2s"
+          data-wow-delay=".3s"
+        >
+          <img src="assets/img/faq/1.png" alt="faq img" />
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
   {/* crypto app section end hare */}
   {/* testimonial section start hare */}
-  <section className="testimonial-wrapper section-padding fix">
-    <div className="container">
-      <div
-        className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
-        data-wow-duration="1.2s"
-      >
-        <img src="assets/img/shape/3.svg" alt="3d bg shape" />
-      </div>
-      <div className="col-lg-8 col-xl-6 offset-xl-3 col-12 offset-lg-2 text-center">
-        <div className="block-contents">
-          <div
-            className="section-title wow fadeInDown"
-            data-wow-duration="1.2s"
-          >
-            <h2>What Our Clients Are Saying</h2>
-          </div>
-        </div>
-      </div>
-      <div className="col-12 col-xl-12">
-        <div className="testimonial-carousel-active swiper">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <div className="single-testimoinal-item">
-                <div className="client-desig">
-                  <div
-                    className="client-img bg-cover"
-                    style={{
-                      backgroundImage: 'url("assets/img/testimonial/1.jpg")'
-                    }}
-                  />
-                  <div className="client-name">
-                    <h6>Ava Martinez</h6>
-                    <span>Financial Planner</span>
-                  </div>
-                </div>
-                <div className="feedback">
-                  “Lorem ipsum dolor sit ametion consectetur adipisicing elit.
-                  Ulti amet officiis optio sequi aliquid provident totam.”
-                </div>
-                <div className="rating">
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="single-testimoinal-item">
-                <div className="client-desig">
-                  <div
-                    className="client-img bg-cover"
-                    style={{
-                      backgroundImage: 'url("assets/img/testimonial/2.jpg")'
-                    }}
-                  />
-                  <div className="client-name">
-                    <h6>Samuel Wilson</h6>
-                    <span>Software engineer</span>
-                  </div>
-                </div>
-                <div className="feedback">
-                  “Lorem ipsum dolor sit ametion consectetur adipisicing elit.
-                  Ulti amet officiis optio sequi aliquid provident totam.”
-                </div>
-                <div className="rating">
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="single-testimoinal-item">
-                <div className="client-desig">
-                  <div
-                    className="client-img bg-cover"
-                    style={{
-                      backgroundImage: 'url("assets/img/testimonial/3.jpg")'
-                    }}
-                  />
-                  <div className="client-name">
-                    <h6>Matthew Turner</h6>
-                    <span>App Developer</span>
-                  </div>
-                </div>
-                <div className="feedback">
-                  “Lorem ipsum dolor sit ametion consectetur adipisicing elit.
-                  Ulti amet officiis optio sequi aliquid provident totam.”
-                </div>
-                <div className="rating">
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="single-testimoinal-item">
-                <div className="client-desig">
-                  <div
-                    className="client-img bg-cover"
-                    style={{
-                      backgroundImage: 'url("assets/img/testimonial/4.jpg")'
-                    }}
-                  />
-                  <div className="client-name">
-                    <h6>Emma Walker</h6>
-                    <span>Account executive</span>
-                  </div>
-                </div>
-                <div className="feedback">
-                  “Lorem ipsum dolor sit ametion consectetur adipisicing elit.
-                  Ulti amet officiis optio sequi aliquid provident totam.”
-                </div>
-                <div className="rating">
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide">
-              <div className="single-testimoinal-item">
-                <div className="client-desig">
-                  <div
-                    className="client-img bg-cover"
-                    style={{
-                      backgroundImage: 'url("assets/img/testimonial/5.jpg")'
-                    }}
-                  />
-                  <div className="client-name">
-                    <h6>Daniel Carter</h6>
-                    <span>Software engineer</span>
-                  </div>
-                </div>
-                <div className="feedback">
-                  “Lorem ipsum dolor sit ametion consectetur adipisicing elit.
-                  Ulti amet officiis optio sequi aliquid provident totam.”
-                </div>
-                <div className="rating">
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                  <i className="icon-star" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="testimonial__pagination text-center mt-4" />
-        </div>
-      </div>
-    </div>
-  </section>
+ 
   {/* testimonial section end hare */}
   {/* faq section start hare */}
   <section className="faq-video-block section-padding section-bg overflow-hidden">
-    <div className="container">
+ <div className="container">
+  <div
+    className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
+    data-wow-duration="1.2s"
+  >
+    <img src="assets/img/shape/4.svg" alt="3d bg shape" />
+  </div>
+  <div className="col-lg-6 col-xl-6 offset-xl-3 col-12 offset-lg-2 text-center">
+    <div className="block-contents">
       <div
-        className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
+        className="section-title wow fadeInDown"
         data-wow-duration="1.2s"
       >
-        <img src="assets/img/shape/4.svg" alt="3d bg shape" />
+        <h2>Trading Questions, Answered Here</h2>
       </div>
-      <div className="col-lg-6 col-xl-6 offset-xl-3 col-12 offset-lg-2 text-center">
-        <div className="block-contents">
+    </div>
+  </div>
+  <div className="row">
+    <div className="col-lg-7 ps-xl-5 col-12 mt-xl-0 mt-5">
+      <div className="faq-accordion ms-xl-4 me-xl-4">
+        <div className="accordion" id="mainaccordion">
+
           <div
-            className="section-title wow fadeInDown"
-            data-wow-duration="1.2s"
+            className="accordion-item wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay=".3s"
           >
-            <h2>Trading Questions, Answered Here</h2>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-lg-7 ps-xl-5 col-12 mt-xl-0 mt-5">
-          <div className="faq-accordion  ms-xl-4 me-xl-4">
-            <div className="accordion" id="mainaccordion">
-              <div
-                className="accordion-item wow fadeInUp"
-                data-wow-duration="1s"
-                data-wow-delay=".3s"
+            <h4 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqask1"
+                aria-expanded="false"
+                aria-controls="faqask1"
               >
-                <h4 className="accordion-header">
-                  <button
-                    className="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqask1"
-                    aria-expanded="false"
-                    aria-controls="faqask1"
-                  >
-                    Is the Trading Site Safe and Reliable?
-                  </button>
-                </h4>
-                <div
-                  id="faqask1"
-                  className="accordion-collapse collapse show"
-                  data-bs-parent="#mainaccordion"
-                >
-                  <div className="accordion-body">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Placeat consequuntur quisquam maiores expedita similique,
-                    excepturi rerum. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. A eum, animi esse ut perspiciatis modi.
-                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Veniam, illum! Porro!
-                  </div>
-                </div>
-              </div>
-              <div
-                className="accordion-item wow fadeInUp"
-                data-wow-duration="1.1s"
-                data-wow-delay=".6s"
-              >
-                <h4 className="accordion-header">
-                  <button
-                    className="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqask2"
-                    aria-expanded="true"
-                    aria-controls="faqask2"
-                  >
-                    Trading Fees and Commissions: How Much?
-                  </button>
-                </h4>
-                <div
-                  id="faqask2"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#mainaccordion"
-                >
-                  <div className="accordion-body">
-                    Ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-                    consequuntur quisquam maiores expedita similique, excepturi
-                    rerum. Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. A eum, animi esse ut perspiciatis modi. Lorem ipsum
-                    dolor sit amet. Lorem ipsum dolor sit amet, consectetur
-                    adipisicing elit. Veniam, illum! Porro!
-                  </div>
-                </div>
-              </div>
-              <div
-                className="accordion-item wow fadeInUp"
-                data-wow-duration="1.1s"
-                data-wow-delay=".9s"
-              >
-                <h4 className="accordion-header">
-                  <button
-                    className="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#faqask3"
-                    aria-expanded="false"
-                    aria-controls="faqask3"
-                  >
-                    Key factors for choosing a trading platform?
-                  </button>
-                </h4>
-                <div
-                  id="faqask3"
-                  className="accordion-collapse collapse"
-                  data-bs-parent="#mainaccordion"
-                >
-                  <div className="accordion-body">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Placeat consequuntur quisquam maiores expedita similique,
-                    excepturi rerum. Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. A eum, animi esse ut perspiciatis modi.
-                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Veniam, illum! Porro!
-                  </div>
-                </div>
+                Is the Trading Site Safe and Reliable?
+              </button>
+            </h4>
+            <div
+              id="faqask1"
+              className="accordion-collapse collapse show"
+              data-bs-parent="#mainaccordion"
+            >
+              <div className="accordion-body">
+                Our platform uses advanced security protocols including SSL encryption and two-factor authentication to ensure your funds and data are fully protected. We comply with all regulatory standards and continuously monitor for suspicious activity to provide you a safe and reliable trading experience.
               </div>
             </div>
           </div>
+
           <div
-            className="faq-bottom ms-xl-4 mt-4 wow fadeInUp"
-            data-wow-duration="1s"
+            className="accordion-item wow fadeInUp"
+            data-wow-duration="1.1s"
+            data-wow-delay=".6s"
+          >
+            <h4 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqask2"
+                aria-expanded="false"
+                aria-controls="faqask2"
+              >
+                Trading Fees and Commissions: How Much?
+              </button>
+            </h4>
+            <div
+              id="faqask2"
+              className="accordion-collapse collapse"
+              data-bs-parent="#mainaccordion"
+            >
+              <div className="accordion-body">
+                We offer transparent fee structures with competitive commissions and no hidden charges. Fees vary depending on the trading volume and account type. Visit our pricing page for detailed information tailored to your trading style.
+              </div>
+            </div>
+          </div>
+
+          <div
+            className="accordion-item wow fadeInUp"
+            data-wow-duration="1.1s"
             data-wow-delay=".9s"
           >
-            <span>Still have questions?</span>
-            <a href="contact.html">Get in touch</a>
-          </div>
-        </div>
-        <div className="col-lg-5 pe-xl-5 col-12">
-          <div
-            className="question__form-wrapper"
-            data-aos-duration={1000}
-            data-aos="fade-up"
-          >
-            <h3>Seeking Information?</h3>
-           <Form/>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/* faq section start hare */}
-  {/* blog section start hare */}
-  <section className=" blog-wrapper section-padding fix">
-    <div className="container">
-      <div
-        className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
-        data-wow-duration="1.2s"
-      >
-        <img src="assets/img/shape/2.svg" alt="3d bg shape" />
-      </div>
-      <div className="col-lg-8 col-xl-6 offset-xl-3 col-12 offset-lg-2 text-center">
-        <div className="block-contents">
-          <div className="section-title wow fadeInUp" data-wow-duration="1.2s">
-            <h2>Dive into Our Crypto Blog</h2>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-6 col-xl-4 col-12">
-          <div className="blog-inner wow fadeInUp">
-            <div className="blog-thumb">
-              <img src="assets/img/blog/1.jpg" alt="blog-img" />
-            </div>
-            <div className="contents">
-              <div className="post-meta d-flex">
-                <div className="post-cat">
-                  <a href="blog-three-col.html">Trends</a>
-                </div>
-                <div className="post-date">
-                  <span>Apr. 7, 2024</span>
-                </div>
+            <h4 className="accordion-header">
+              <button
+                className="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#faqask3"
+                aria-expanded="false"
+                aria-controls="faqask3"
+              >
+                What Are the Key Factors for Choosing a Trading Platform?
+              </button>
+            </h4>
+            <div
+              id="faqask3"
+              className="accordion-collapse collapse"
+              data-bs-parent="#mainaccordion"
+            >
+              <div className="accordion-body">
+                When selecting a trading platform, consider security, fees, available instruments, ease of use, customer support, and advanced tools such as charting and analytics. Our platform is designed to excel in all these areas, helping you trade confidently and effectively.
               </div>
-              <h4>
-                <a href="blog-details.html">
-                  Trending Trading To Empower Strategies, Make Decisions
-                </a>
-              </h4>
-              <a href="blog-details.html" className="read-more-link">
-                read more <i className="icon-arrow-right" />
-              </a>
             </div>
           </div>
-        </div>
-        <div className="col-md-6 col-xl-4 col-12">
-          <div className="blog-inner wow fadeInUp" data-wow-delay=".2s">
-            <div className="blog-thumb">
-              <img src="assets/img/blog/2.jpg" alt="blog-img" />
-            </div>
-            <div className="contents">
-              <div className="post-meta d-flex">
-                <div className="post-cat">
-                  <a href="blog-three-col.html">Analysis</a>
-                </div>
-                <div className="post-date">
-                  <span>Jan. 9, 2024</span>
-                </div>
-              </div>
-              <h4>
-                <a href="blog-details.html">
-                  Dive Analysis To Uncover Insights for Strategic
-                </a>
-              </h4>
-              <a href="blog-details.html" className="read-more-link">
-                read more <i className="icon-arrow-right" />
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="col-md-6 col-xl-4 col-12">
-          <div className="blog-inner wow fadeInUp" data-wow-delay=".4s">
-            <div className="blog-thumb">
-              <img src="assets/img/blog/3.jpg" alt="blog-img" />
-            </div>
-            <div className="contents">
-              <div className="post-meta d-flex">
-                <div className="post-cat">
-                  <a href="blog-three-col.html">Strategies</a>
-                </div>
-                <div className="post-date">
-                  <span>Feb. 13, 2024</span>
-                </div>
-              </div>
-              <h4>
-                <a href="blog-details.html">
-                  Powerful Trading Strategies To Boost Your Success
-                </a>
-              </h4>
-              <a href="blog-details.html" className="read-more-link">
-                read more <i className="icon-arrow-right" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="text-center mt-5">
-        <a href="blog-three-col.html" className="custom-btn">
-          View All blogs
-        </a>
-      </div>
-    </div>
-  </section>
 
+        </div>
+      </div>
+      <div
+        className="faq-bottom ms-xl-4 mt-4 wow fadeInUp"
+        data-wow-duration="1s"
+        data-wow-delay=".9s"
+      >
+        <span>Still have questions?</span>
+        <a href="contact.html">Get in touch</a>
+      </div>
+    </div>
+
+    <div className="col-lg-5 pe-xl-5 col-12">
+      <div
+        className="question__form-wrapper"
+        data-aos-duration={1000}
+        data-aos="fade-up"
+      >
+        <h3>Seeking Information?</h3>
+        <Form />
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+ 
   <Modal
           title="Get in Touch"
           visible={isModalVisible}

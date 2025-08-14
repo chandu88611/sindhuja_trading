@@ -7,10 +7,10 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const defaultMetadata = {
-  title: "Equiwiz | Comprehensive Financial & Investment Solutions with Motilal Oswal",
+  title: "Vertex Algo Trading",
   description:
-    "Equiwiz, a trusted business associate of Motilal Oswal, offers a wide range of financial services including stock market trading, mutual funds, life and motor insurance, fixed deposits, options trading, and personal portfolio management. Partner with Equiwiz for expert guidance in building a secure and profitable financial future.",
-  canonical: "https://equiwiz.com/",
+    "Vertex Algo Trading is your trusted partner in automated Forex trading. We specialize in providing powerful, pre-tested Forex algo trading bots designed to execute high-frequency, precision-driven strategies across global currency markets.",
+  canonical: "https://vertexalgotrading.com/",
 };
 
 export default function RootLayout({ children, metadata = defaultMetadata }) {
@@ -22,7 +22,7 @@ export default function RootLayout({ children, metadata = defaultMetadata }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <link rel="canonical" href={metadata.canonical} />
-        <link rel="shortcut icon" href="/assets/img/favicon.png" />
+        <link rel="shortcut icon" href="/fav.png" />
 
         <link rel="stylesheet" href="/assets/css/icons.css" />
         <link rel="stylesheet" href="/assets/css/animate.css" />
@@ -36,25 +36,15 @@ export default function RootLayout({ children, metadata = defaultMetadata }) {
           name="google-site-verification"
           content="DAG0zrPA2NMfIdfK6lMRhL_5AZDx0EoK9D8u2gC2fVc"
         />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-5HL9CH1HDX"
-        ></script>
-        <script>
-          {`
-           window.dataLayer = window.dataLayer || []; 
-             function gtag(){dataLayer.push(arguments);
-             }  
-              gtag('js', new Date()); 
-               gtag('config', 'G-5HL9CH1HDX');
-          `}
-        </script>
+        <meta name="facebook-domain-verification" content="e5a4qqeby57matr0fy1pannofqol35" />
+        
+ 
+
       </head>
-      <body className="body-wrapper" data-menu-collapse="lg">
+      <body className="" data-menu-collapse="lg">
         {children}
 
-        {/* Ant Design Modal for Form */}
-   
+       
       </body>
 
       <script src="/assets/js/jquery.min.js"></script>

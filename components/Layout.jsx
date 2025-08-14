@@ -24,7 +24,7 @@ function Layout({ children }) {
 <Header/>
        {children}
       <Footer />
-      <a href="https://wa.me/918088566821" className="">
+      <a href="https://wa.me/918310327035" className="">
         <div className="whatsapp blink-animation">
           <FaWhatsapp size={"40px"} />
         </div>

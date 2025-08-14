@@ -6,25 +6,29 @@ import RootLayout from "../layout";
 import { useState, useEffect } from "react";
 import { Modal } from "antd";
 import Form from "@/components/Form";
-export default function About() {
+// imports unchanged
+
+export default function CryptoCurrencySoftware() {
   const metaData = {
-    title: "Crypto Currency Software - Equiwiz",
+    title: "Crypto Currency Software - Vertex Algo Trading",
     description:
-      "Unleash the power of cryptocurrency trading with our state-of-the-art Crypto Currency Software. Automate trades, monitor market trends, and maximize returns with cutting-edge algorithms.",
-    canonical: "https://algotradingelite.com/crypto-currency-software"
+      "Explore powerful cryptocurrency trading software that supports automation, advanced analytics, and diversified portfolio management.",
+    canonical: "https://vertexalgotrading.com/crypto-currency-software",
   };
+
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setIsModalVisible(true);
-    }, 5000); // Show modal every 8 seconds
-    return () => clearInterval(interval); // Clean up on unmount
+    }, 5000);
+    return () => clearTimeout(interval);
   }, []);
 
   const handleClose = () => {
     setIsModalVisible(false);
   };
+
   return (
     <RootLayout metadata={metaData}>
       <main>
@@ -39,7 +43,7 @@ export default function About() {
                       <nav aria-label="breadcrumb">
                         <ul className="breadcrumb justify-content-center">
                           <li className="breadcrumb-item">
-                            <a href="index-2.html">Home</a>
+                            <a href="/">Home</a>
                           </li>
                         </ul>
                       </nav>
@@ -63,7 +67,7 @@ export default function About() {
                   </div>
                   <div className="col-md-6">
                     <div className="promo-content mt-lg-5 ps-lg-5">
-                      <h2>Dominate the Crypto Market</h2>
+                      <h2>Navigate the Cryptocurrency Market</h2>
                       <div className="features-list">
                         <ul>
                           <li>
@@ -72,7 +76,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Real-time crypto market data and analysis.
+                            Access real-time market data and actionable insights.
                           </li>
                           <li>
                             <img
@@ -80,7 +84,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Automated trading for top cryptocurrencies.
+                            Automate trades across major cryptocurrencies.
                           </li>
                           <li>
                             <img
@@ -88,7 +92,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Portfolio management with advanced tools.
+                            Manage your portfolio with customizable tools.
                           </li>
                         </ul>
                       </div>
@@ -124,11 +128,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/1.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Advanced Algorithms</a>
-                      </h3>
+                      <h3>Advanced Algorithms</h3>
                       <p>
-                        Utilize AI-driven algorithms for optimized crypto trading strategies.
+                        Leverage AI-based algorithms developed to support your trading strategy.
                       </p>
                     </div>
                   </div>
@@ -137,11 +139,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/2.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Multi-Currency Support</a>
-                      </h3>
+                      <h3>Multi-Currency Support</h3>
                       <p>
-                        Trade multiple cryptocurrencies like Bitcoin, Ethereum, and more.
+                        Trade and monitor multiple cryptocurrencies including Bitcoin, Ethereum, and others.
                       </p>
                     </div>
                   </div>
@@ -150,35 +150,33 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/3.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Risk Management</a>
-                      </h3>
+                      <h3>Risk Management Tools</h3>
                       <p>
-                        Minimize trading risks with automated stop-loss and alerts.
+                        Utilize automated stop-loss orders and alerts to help manage your risks.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
+
+            {/* Uncomment Modal if needed */}
             {/* <Modal
-          title="Get in Touch"
-          visible={isModalVisible}
-          onCancel={handleClose}
-          footer={null}
-          centered
-          width={600}
-        >
-            <div
-            className="question__form-wrapper"
-            data-aos-duration={1000}
-            data-aos="fade-up"
-          >
-
-
-          <Form />
-          </div>
-        </Modal> */}
+              title="Get in Touch"
+              visible={isModalVisible}
+              onCancel={handleClose}
+              footer={null}
+              centered
+              width={600}
+            >
+              <div
+                className="question__form-wrapper"
+                data-aos-duration={1000}
+                data-aos="fade-up"
+              >
+                <Form />
+              </div>
+            </Modal> */}
           </>
         </Layout>
       </main>

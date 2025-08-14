@@ -212,7 +212,7 @@ body {
   font-weight: 400;
   line-height: 28px;
   color: #97a6b3;
-  background-color: #12141d;
+  background-color: #164343;
 }
 @media (max-width: 767px) {
   body {
@@ -2097,7 +2097,7 @@ nav .breadcrumb li {
     Template Default Button, Input Styles - Value Change with Your's Need
  -------------------------------------------------------------------- */
 .custom-btn {
-  color: #1e2028;
+  color: #00295a;
   border-radius: 0.5rem;
   padding: 10px 25px;
   font-weight: 700;
@@ -2122,7 +2122,7 @@ nav .breadcrumb li {
 }
 .custom-btn:hover {
   transform: translatey(-2px);
-  color: #1e2028;
+  color: #00295a;
 }
 .custom-btn--style-2 {
   background: linear-gradient(0deg, rgb(119, 123, 218) 0%, rgb(118, 120, 217) 100%);
@@ -2305,7 +2305,7 @@ header.header-1 .main-menu ul > li > ul {
   position: absolute;
   top: 100%;
   width: 200px;
-  background-color: #1e2028;
+  background-color: #00295a;
   left: 0;
   z-index: 999;
   box-shadow: 0 13px 35px -12px rgba(35, 35, 35, 0.15);
@@ -2400,12 +2400,12 @@ header.header-1 .header-right-element .color-2:hover {
 header.sticky {
   position: fixed;
   top: 0;
-  background-color: #12141d;
+  background-color: #164343;
   border: 1px solid rgba(255, 193, 7, 0.2);
 }
 
 .page-banner-wrap {
-  background-color: #FFC107;
+  /* background-color: #FFC107; */
   padding-top: 155px;
   padding-bottom: 100px;
   position: relative;
@@ -2413,7 +2413,7 @@ header.sticky {
   overflow: hidden;
 }
 .page-banner-wrap::before {
-  background-image: url(../img/about/bg.png);
+  /* background-image: url(../img/about/bg.png); */
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -2638,9 +2638,10 @@ header.sticky {
   z-index: 1;
   overflow: hidden;
   position: relative;
+  background-color: #164343;
 }
 .hero-1::before {
-  background-image: url(../img/banner/bg.png);
+  /* background-image: url(../img/banner/bg.png); */
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -2776,7 +2777,7 @@ header.sticky {
   margin-right: -30px;
 }
 .hero-1 .single-slide .hero-mobile img {
-  filter: drop-shadow(0px 3.70787px 55.618px rgba(40, 55, 79, 0.1));
+  filter: drop-shadow(0px 3.70787px 55.618px rgba(215, 193, 29, 0.949));
 }
 @media (max-width: 991px) {
   .hero-1 .single-slide .hero-mobile img {
@@ -3144,7 +3145,7 @@ header.sticky {
 }
 
 .section-bg {
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 
 .section-bg-2 {
@@ -3160,7 +3161,7 @@ header.sticky {
 }
 
 .section-bg-5 {
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 
 .theme-bg {
@@ -3211,7 +3212,7 @@ header.sticky {
 }
 
 .features-card-item {
-  background-color: #1e2028;
+  background-color: #ffffff;
   box-shadow: 0px 4px 80px rgba(8, 15, 30, 0.06);
   border-radius: 1rem;
   padding: 40px;
@@ -3226,6 +3227,10 @@ header.sticky {
 .features-card-item:hover {
   transform: translateY(-5px);
 }
+.features-card-item h3 {
+  color: black;
+
+}
 .features-card-item:hover h3 {
   color: #FFC107;
 }
@@ -3237,13 +3242,13 @@ header.sticky {
   font-size: 18px;
 }
 .features-card-item--style2 {
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 .features-card-item--style2:hover {
   transform: translateY(-5px);
 }
 .features-card-item--style2:hover h3 {
-  color: #afd31a;
+  color: black;
 }
 
 .single-core-feature {
@@ -3638,7 +3643,7 @@ header.sticky {
   transition: all 0.3s ease-in-out;
 }
 .single-testimoinal-item.style-2 {
-  background: #1e2028;
+  background: #00295a;
   border-radius: 10px;
 }
 .single-testimoinal-item.style-2 .rating {
@@ -3650,7 +3655,7 @@ header.sticky {
   border-bottom: 1px solid rgba(151, 166, 179, 0.1);
 }
 .single-testimoinal-item--style3 {
-  background: #1e2028;
+  background: #00295a;
   border-radius: 10px;
 }
 .single-testimoinal-item--style3 .rating {
@@ -3717,11 +3722,11 @@ header.sticky {
 }
 
 .swiper-slide-active .single-testimoinal-item {
-  background-color: #1e2028;
+  background-color: #00295a;
   border-color: #FFC107;
 }
 .swiper-slide-active--style2 .single-testimoinal-item {
-  background-color: #1e2028;
+  background-color: #00295a;
   border-color: #afd31a;
 }
 
@@ -3862,7 +3867,7 @@ header.sticky {
 }
 
 .single-pricing-package {
-  background-color: #1e2028;
+  background-color: #00295a;
   border: 1px solid transparent;
   padding: 40px 16px;
   box-shadow: 0px 4px 80px rgba(8, 15, 30, 0.06);
@@ -3873,7 +3878,7 @@ header.sticky {
   transition: all 0.2s ease-in-out;
 }
 .single-pricing-package--style2 {
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 .single-pricing-package--active2 {
   border-color: #afd31a;
@@ -3907,7 +3912,7 @@ header.sticky {
   right: 15px;
   top: 30px;
   padding: 5px 16px;
-  color: #1e2028;
+  color: #00295a;
   background-color: #FFC107;
   font-size: 16px;
   font-weight: 600;
@@ -4390,7 +4395,7 @@ header.sticky {
 }
 
 .client-info {
-  background-color: #1e2028;
+  background-color: #00295a;
   border: 1px solid transparent;
   border-radius: 1rem;
   text-align: center;
@@ -4414,7 +4419,7 @@ header.sticky {
   transform: scale(1.1);
 }
 .client-info--style2 {
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 .client-info--style2 .client-name h4 {
   color: #afd31a;
@@ -4655,7 +4660,7 @@ header.sticky {
   height: 30px;
   background: #FFC107;
   border-radius: 50%;
-  color: #1e2028;
+  color: #00295a;
   font-size: 16px;
   line-height: 30px;
   text-align: center;
@@ -4734,7 +4739,7 @@ header.sticky {
   padding: 0.825rem 1.5rem;
   border: 1px solid rgba(255, 193, 7, 0.1);
   border-radius: 0.5rem;
-  background-color: #1e2028;
+  background-color: #00295a;
   box-shadow: none;
   color: #FFF;
 }
@@ -4755,7 +4760,7 @@ header.sticky {
 }
 .question__form-wrapper--style-3 .question__form .form-control {
   border: 1px solid rgba(175, 211, 26, 0.1);
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 .question__form-wrapper--style-3 .question__form .form-control:focus, .question__form-wrapper--style-3 .question__form .form-control:active, .question__form-wrapper--style-3 .question__form .form-control:focus-visible {
   border-color: #afd31a;
@@ -4774,7 +4779,7 @@ header.sticky {
   overflow: hidden;
 }
 .blog-inner .contents {
-  background-color: #1e2028;
+  background-color: #00295a;
   padding: 1.5rem;
 }
 .blog-inner .contents .post-meta {
@@ -4839,7 +4844,7 @@ header.sticky {
   color: #FFC107;
 }
 .blog-inner--style2 .contents {
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 .blog-inner--style2:hover .contents h4 {
   color: #afd31a;
@@ -4914,7 +4919,7 @@ header.sticky {
 }
 
 .blog-sidebar-wrapper {
-  background-color: #1e2028;
+  background-color: #00295a;
   padding: 30px;
   margin-top: 30px;
   border-radius: 3px;
@@ -5041,7 +5046,7 @@ header.sticky {
 }
 
 .newsletter-subscribe-widgets {
-  background: #1e2028;
+  background: #00295a;
   border-radius: 3px;
   padding: 30px;
   margin-top: 30px;
@@ -5319,7 +5324,7 @@ header.sticky {
   font-size: 14px;
   transition: all 0.3s ease-in-out;
   display: inline-block;
-  background-color: #1e2028;
+  background-color: #00295a;
 }
 .share-post-wrapper .share-links a i.fa-facebook-f {
   background-color: #4E6297;
@@ -5378,7 +5383,7 @@ header.sticky {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #1e2028;
+  background-color: #00295a;
   float: left;
   overflow: hidden;
   margin-right: 30px;
@@ -5435,7 +5440,7 @@ header.sticky {
 }
 
 .comment-form-wrapper {
-  background-color: #1e2028;
+  background-color: #00295a;
   padding: 30px;
   border-radius: 5px;
   margin-top: 40px;
@@ -5547,7 +5552,7 @@ header.sticky {
   gap: 10px;
 }
 .blog-pagination .page-item .page-link {
-  background-color: #1e2028 !important;
+  background-color: #00295a !important;
   border-color: rgba(255, 193, 7, 0.1);
   color: #FFC107;
   padding: 16px 24px;
@@ -5567,7 +5572,7 @@ header.sticky {
 
 .sidebar__widget {
   padding: 40px;
-  background: #1e2028;
+  background: #00295a;
   border-radius: 0.5rem;
 }
 @media (max-width: 991px) {
@@ -5888,7 +5893,7 @@ header.sticky {
 .single-contact-box {
   border-radius: 0.5rem;
   border: 2px solid transparent;
-  background-color: #1e2028;
+  background-color: #00295a;
   padding: 40px;
   margin-top: 70px;
   transition: all 0.3s ease-in-out;
@@ -5995,7 +6000,7 @@ footer .about-us-widget p {
 
 .account {
   overflow: hidden;
-  background: #1e2028;
+  background: #00295a;
 }
 .account__wrapper {
   text-align: center;
@@ -6081,7 +6086,7 @@ footer .about-us-widget p {
   }
 }
 .account__form .form-floating input {
-  background: #1e2028;
+  background: #00295a;
   border: 1px solid rgba(255, 193, 7, 0.1);
   border-radius: 0.75rem;
   color: #FFFFFF;

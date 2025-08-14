@@ -3,18 +3,30 @@
 import Header from '@/components/Header'
 import Layout from '@/components/Layout'
 import React from 'react'
+import RootLayout from '../layout'
 
 function page() {
   return (
-    <Layout>
-    <div className="nk-app-root has-mask">
-        <div className="nk-mask bg-pattern-dot-white-sm" />
-        <header className="nk-header has-shape">
-          <div className="nk-shape bg-shape-blur-q mt-n20p ms-10p start-50 translate-middle-x" />
-          <div className="nk-shape bg-shape-blur-r mt-n10p ms-n10p start-50 translate-middle-x" />
-          <div className="nk-shape bg-shape-border-c mt-12 ms-n40p start-50 translate-middle-x" />
-          <Header></Header>
-        </header>
+ <RootLayout>
+       <Layout>
+          <div className="page-banner-wrap text-capitalize">
+    <div className="container">
+      <div className="row">
+        <div className="col-12 col-xl-6 ps-xl-0 pe-xl-0 offset-xl-3 col-lg-8 offset-lg-2 text-center text-white">
+          <div className="page-heading">
+            <h1>Refund Policy</h1>
+            <nav aria-label="breadcrumb">
+              <ul className="breadcrumb justify-content-center">
+                <li className="breadcrumb-item">
+                  <a href="/">Home</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
         <main className="nk-pages">
         <section className="section section-bottom-0 has-mask">
       <div className="nk-mask bg-pattern-dot bg-blend-around mt-n5 mb-10p mh-50vh" />
@@ -98,7 +110,7 @@ function page() {
       purchase, a complete account trading history, journal, and expert history
       exported from your MT4 platform in PDF or HTML extension for the
       particular account. Send the email to&nbsp;
-      <a href="mailto:support@algotradingelite.com.co">support@algotradingelite.com.co</a>
+      <a href="mailto:support@vertexalgotrading.com">support@vertexalgotrading.com</a>
       &nbsp;from the same email address provided in the expert coding form.
       Please allow up to 72 hours for our team to review your details and
       process your refund or transfer of license request, depending on the
@@ -131,7 +143,7 @@ function page() {
   >
     <div className="elementor-widget-container">
       Questions about the refund policy should be sent to us at&nbsp;
-      <a href="mailto:support@algotradingelite.com.co">support@algotradingelite.com.co</a>.
+      <a href="mailto:support@vertexalgotrading.com">support@vertexalgotrading.com</a>.
     </div>
   </div>{" "}
 </div>
@@ -144,8 +156,9 @@ function page() {
     
         </main>
         {/*?php include 'footer'; ?*/}
-      </div>
+   
         </Layout>
+         </RootLayout>
   )
 }
 

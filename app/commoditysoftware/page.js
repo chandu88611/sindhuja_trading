@@ -6,25 +6,32 @@ import RootLayout from "../layout";
 import Form from "@/components/Form";
 import { useState, useEffect } from "react";
 import { Modal } from "antd";
-export default function About() {
+
+
+
+// imports remain the same
+
+export default function CommoditySoftware() {
   const metaData = {
-    title: "Commodity Software - Equiwiz",
+    title: "Commodity Software - Vertex Algo Trading",
     description:
-      "Unlock the potential of commodity trading with our cutting-edge automated trading software. Designed for efficiency and precision, our software offers advanced analytics, real-time updates, and a seamless trading experience.",
-    canonical: "https://algotradingelite.com/commodity-software"
+      "Discover advanced commodity trading software designed for efficient market analysis and automated trade execution with real-time insights.",
+    canonical: "https://vertexalgotrading.com/commodity-software",
   };
+
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setIsModalVisible(true);
-    }, 5000); // Show modal every 8 seconds
-    return () => clearInterval(interval); // Clean up on unmount
+    }, 5000);
+    return () => clearTimeout(interval);
   }, []);
 
   const handleClose = () => {
     setIsModalVisible(false);
   };
+
   return (
     <RootLayout metadata={metaData}>
       <main>
@@ -39,7 +46,7 @@ export default function About() {
                       <nav aria-label="breadcrumb">
                         <ul className="breadcrumb justify-content-center">
                           <li className="breadcrumb-item">
-                            <a href="index-2.html">Home</a>
+                            <a href="/">Home</a>
                           </li>
                         </ul>
                       </nav>
@@ -63,7 +70,7 @@ export default function About() {
                   </div>
                   <div className="col-md-6">
                     <div className="promo-content mt-lg-5 ps-lg-5">
-                      <h2>Master the Commodity Market</h2>
+                      <h2>Manage Your Commodity Trading with Confidence</h2>
                       <div className="features-list">
                         <ul>
                           <li>
@@ -72,7 +79,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Real-time analytics for informed decision-making.
+                            Real-time market data and analytics to support informed decisions.
                           </li>
                           <li>
                             <img
@@ -80,7 +87,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Automated trading for maximum efficiency.
+                            Automation tools to assist in timely trade execution.
                           </li>
                           <li>
                             <img
@@ -88,7 +95,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Comprehensive market insights and alerts.
+                            Customizable alerts to keep you updated on key market movements.
                           </li>
                         </ul>
                       </div>
@@ -124,11 +131,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/1.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Precision Trading</a>
-                      </h3>
+                      <h3>Accuracy and Precision</h3>
                       <p>
-                        Leverage accurate algorithms designed to optimize your trading strategies.
+                        Utilize algorithms designed to support your trading strategy with reliable market analysis.
                       </p>
                     </div>
                   </div>
@@ -137,11 +142,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/2.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Customizable Options</a>
-                      </h3>
+                      <h3>Flexible Settings</h3>
                       <p>
-                        Tailor your trading parameters to match your investment goals.
+                        Customize parameters to better align trading actions with your risk appetite and goals.
                       </p>
                     </div>
                   </div>
@@ -150,38 +153,40 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/3.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Real-time Alerts</a>
-                      </h3>
+                      <h3>Timely Market Alerts</h3>
                       <p>
-                        Stay ahead with instant updates on market trends and opportunities.
+                        Receive notifications to stay updated on relevant market changes and opportunities.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
+
+            {/* Modal can be uncommented and used if needed */}
             {/* <Modal
-          title="Get in Touch"
-          visible={isModalVisible}
-          onCancel={handleClose}
-          footer={null}
-          centered
-          width={600}
-        >
-            <div
-            className="question__form-wrapper"
-            data-aos-duration={1000}
-            data-aos="fade-up"
-          >
-
-
-          <Form />
-          </div>
-        </Modal> */}
+              title="Get in Touch"
+              visible={isModalVisible}
+              onCancel={handleClose}
+              footer={null}
+              centered
+              width={600}
+            >
+              <div
+                className="question__form-wrapper"
+                data-aos-duration={1000}
+                data-aos="fade-up"
+              >
+                <Form />
+              </div>
+            </Modal> */}
           </>
         </Layout>
       </main>
     </RootLayout>
   );
 }
+
+
+
+

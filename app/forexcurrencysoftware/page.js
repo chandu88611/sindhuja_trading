@@ -6,25 +6,29 @@ import RootLayout from "../layout";
 import { useState, useEffect } from "react";
 import { Modal } from "antd";
 import Form from "@/components/Form";
-export default function About() {
+// imports remain unchanged
+
+export default function ForexCurrencySoftware() {
   const metaData = {
-    title: "Forex Currency Software - Equiwiz",
+    title: "Forex Currency Software - Vertex Algo Trading",
     description:
-      "Experience the future of forex trading with our innovative Forex Currency Software. Automate your trades, analyze market trends, and maximize your profit potential with ease and precision.",
-    canonical: "https://algotradingelite.com/forex-currency-software"
+      "Discover innovative forex trading software designed to assist with market analysis, automate trades, and support informed trading decisions.",
+    canonical: "https://vertexalgotrading.com/forex-currency-software",
   };
+
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     const interval = setTimeout(() => {
       setIsModalVisible(true);
-    }, 5000); // Show modal every 8 seconds
-    return () => clearInterval(interval); // Clean up on unmount
+    }, 5000);
+    return () => clearTimeout(interval);
   }, []);
 
   const handleClose = () => {
     setIsModalVisible(false);
   };
+
   return (
     <RootLayout metadata={metaData}>
       <main>
@@ -39,7 +43,7 @@ export default function About() {
                       <nav aria-label="breadcrumb">
                         <ul className="breadcrumb justify-content-center">
                           <li className="breadcrumb-item">
-                            <a href="index-2.html">Home</a>
+                            <a href="/">Home</a>
                           </li>
                         </ul>
                       </nav>
@@ -63,7 +67,7 @@ export default function About() {
                   </div>
                   <div className="col-md-6">
                     <div className="promo-content mt-lg-5 ps-lg-5">
-                      <h2>Revolutionize Your Forex Trading</h2>
+                      <h2>Enhance Your Forex Trading</h2>
                       <div className="features-list">
                         <ul>
                           <li>
@@ -72,7 +76,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Advanced algorithmic strategies for better trading outcomes.
+                            Advanced algorithmic strategies designed to support trading decisions.
                           </li>
                           <li>
                             <img
@@ -80,7 +84,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Real-time forex market insights and analytics.
+                            Real-time forex market data and analysis for better awareness.
                           </li>
                           <li>
                             <img
@@ -88,7 +92,7 @@ export default function About() {
                               src="/assets/img/price/icon/1.png"
                               alt="feature"
                             />
-                            Fully automated trading with minimal manual intervention.
+                            Automation to help execute trades efficiently with minimal manual input.
                           </li>
                         </ul>
                       </div>
@@ -109,7 +113,7 @@ export default function About() {
                   className="nice-arrow-icon d-none d-lg-block wow fadeInDown"
                   data-wow-duration="1.2s"
                 >
-                  <img src="/assets/img/shape/4.svg" alt="bg shape" />
+                  <img src="/assets/img/shape/4.svg" alt="background shape" />
                 </div>
                 <div className="col-xl-8 offset-xl-2 text-center">
                   <div className="block-contents">
@@ -124,11 +128,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/1.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Market Analysis</a>
-                      </h3>
+                      <h3>Market Analysis</h3>
                       <p>
-                        Gain deep insights into forex markets with our real-time analysis tools.
+                        Access detailed real-time forex market analysis to make informed decisions.
                       </p>
                     </div>
                   </div>
@@ -137,11 +139,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/2.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Risk Management</a>
-                      </h3>
+                      <h3>Risk Management</h3>
                       <p>
-                        Minimize risks with our advanced risk management features tailored for forex trading.
+                        Use risk management tools tailored to help you control exposure in forex trading.
                       </p>
                     </div>
                   </div>
@@ -150,11 +150,9 @@ export default function About() {
                       <div className="icon">
                         <img src="/assets/img/service/icons/3.png" alt="Icon" />
                       </div>
-                      <h3>
-                        <a href="services-details.html">Trade Automation</a>
-                      </h3>
+                      <h3>Trade Automation</h3>
                       <p>
-                        Automate your trades with precision algorithms to save time and boost efficiency.
+                        Automate your trades with precise algorithms designed to enhance efficiency.
                       </p>
                     </div>
                   </div>
@@ -162,27 +160,27 @@ export default function About() {
               </div>
             </section>
 
+            {/* Modal can be uncommented when needed */}
             {/* <Modal
-          title="Get in Touch"
-          visible={isModalVisible}
-          onCancel={handleClose}
-          footer={null}
-          centered
-          width={600}
-        >
-            <div
-            className="question__form-wrapper"
-            data-aos-duration={1000}
-            data-aos="fade-up"
-          >
-
-
-          <Form />
-          </div>
-        </Modal> */}
+              title="Get in Touch"
+              visible={isModalVisible}
+              onCancel={handleClose}
+              footer={null}
+              centered
+              width={600}
+            >
+              <div
+                className="question__form-wrapper"
+                data-aos-duration={1000}
+                data-aos="fade-up"
+              >
+                <Form />
+              </div>
+            </Modal> */}
           </>
         </Layout>
       </main>
     </RootLayout>
   );
 }
+
